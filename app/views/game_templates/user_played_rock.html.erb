@@ -1,0 +1,56 @@
+<meta charset="utf-8">
+
+<a href=GameController.play_rock>Play Rock</a><br>
+<a href="/user_played_paper">Play Paper</a><br>
+<a href="/user_played_scissors">Play Scissors</a>
+
+<% lucky_number = rand(100)%>
+
+<% if lucky_number < 33.33 %>
+    <p>
+        <h2>
+            We played rock!
+        </h2>
+
+        <h2>
+            They played paper!
+        </h2>
+        
+        <h2>
+            We lost!
+        </h2>
+    </p>
+
+<% elsif lucky_number > 66.66 %>
+     <p>
+        <h2>
+            We played rock!
+        </h2>
+
+        <h2>
+            They played scissors!
+        </h2>
+        
+        <h2>
+            We won!
+        </h2>
+    </p>
+
+<% else %>
+    <p>
+        <h2>
+            We played rock!
+        </h2>
+
+        <h2>
+            They played rock!
+        </h2>
+        
+        <h2>
+            We tied!
+        </h2>
+    </p>
+
+<% end %>
+
+<a href="/home_page">Rules</a>
