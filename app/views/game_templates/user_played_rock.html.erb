@@ -1,56 +1,105 @@
-<meta charset="utf-8">
+<head>
+    <meta charset = "utf-8">
+    <style>
+        .big {font-size: 160px;
+             margin:0}
+    </style>
+</head>
+   
+<a href="/rock">
+    <i class="far fa-hand-rock"></i>
+    Play Rock
+</a><br>
 
-<a href=GameController.play_rock>Play Rock</a><br>
-<a href="/user_played_paper">Play Paper</a><br>
-<a href="/user_played_scissors">Play Scissors</a>
+<a href="/paper">
+    <i class="far fa-hand-paper"></i>
+    Play Paper
+</a><br>
 
-<% lucky_number = rand(100)%>
+<a href="/scissors">
+    <i class="far fa-hand-scissors"></i>
+    Play Scissors
+</a>
 
-<% if lucky_number < 33.33 %>
-    <p>
-        <h2>
-            We played rock!
-        </h2>
+<%# lucky_number = rand(100)%>
 
-        <h2>
-            They played paper!
-        </h2>
+<%# if lucky_number < 33.33 %>
+    <!--<p>-->
+    <!--    <h2>-->
+    <!--        We played rock!-->
+    <!--    </h2>-->
+
+    <!--    <h2>-->
+    <!--        They played paper!-->
+    <!--    </h2>-->
         
-        <h2>
-            We lost!
-        </h2>
-    </p>
+    <!--    <h2>-->
+    <!--        We lost!-->
+    <!--    </h2>-->
+    <!--</p>-->
 
-<% elsif lucky_number > 66.66 %>
-     <p>
-        <h2>
-            We played rock!
-        </h2>
+<%# elsif lucky_number > 66.66 %>
+    <!-- <p>-->
+    <!--    <h2>-->
+    <!--        We played rock!-->
+    <!--    </h2>-->
 
-        <h2>
-            They played scissors!
-        </h2>
+    <!--    <h2>-->
+    <!--        They played scissors!-->
+    <!--    </h2>-->
         
-        <h2>
-            We won!
-        </h2>
-    </p>
+    <!--    <h2>-->
+    <!--        We won!-->
+    <!--    </h2>-->
+    <!--</p>-->
 
-<% else %>
-    <p>
-        <h2>
-            We played rock!
-        </h2>
+<%# else %>
+    <!--<p>-->
+        <!--<h2>-->
+            <!--We played rock!-->
+    <!--    </h2>-->
 
-        <h2>
-            They played rock!
-        </h2>
+    <!--    <h2>-->
+    <!--        They played rock!-->
+    <!--    </h2>-->
         
-        <h2>
-            We tied!
-        </h2>
-    </p>
+    <!--    <h2>-->
+    <!--        We tied!-->
+    <!--    </h2>-->
+    <!--</p>-->
 
+<%# end %>
+
+
+<%#--------------------------------------------------------%>
+<%#--------------Other approach: create array--------------%>
+<%#--------------------------------------------------------%>
+
+<% all_moves = ["rock", "paper", "scissors"] %>
+<% computer_move = all_moves.sample %>
+
+<h2>We played rock!</h2>
+<h1 class = big><i class="far fa-hand-rock"></i></h1>
+
+<% if computer_move =="rock" %>
+    <h2>They played rock!</h2>
+    <h1 class = big><i class="far fa-hand-rock"></i></h1>
+    
+    
+    <h2>We tied!</h2>
+    
+<% elsif computer_move=="paper" %>
+    <h2> They played paper!</h2>
+    <h1 class = big><i class="far fa-hand-paper"></i></h1>
+    
+    <h2>We lost!</h2>
+    
+<% elsif computer_move=="scissors" %>
+    <h2>They played scissors!</h2>
+    <h1 class = big><i class="far fa-hand-scissors"></i></h1>
+    
+    <h2>We won!</h2>
+    
 <% end %>
 
-<a href="/home_page">Rules</a>
+<a href="/index">Rules</a>

@@ -1,20 +1,35 @@
-<meta charset="utf-8">
+<head>
+    <meta charset = "utf-8">
+    <style>
+       .big {font-size: 160px;
+             margin:0}
+    </style>
+</head>
 
-<a href="/user_played_rock">Play Rock</a><br>
-<a href="/user_played_paper">Play Paper</a><br>
-<a href="/user_played_scissors">Play Scissors</a>
+<a href="/rock">
+    <i class="far fa-hand-rock"></i>
+    Play Rock
+</a><br>
+
+<a href="/paper">
+    <i class="far fa-hand-paper"></i>
+    Play Paper
+</a><br>
+
+<a href="/scissors">
+    <i class="far fa-hand-scissors"></i>
+    Play Scissors
+</a>
 
 <% lucky_number = rand(100)%>
 
 <% if lucky_number < 33.33 %>
     <p>
-        <h2>
-            We played scissors!
-        </h2>
+        <h2>We played scissors!</h2>
+        <h1 class = big><i class="far fa-hand-scissors"></i></h1>
 
-        <h2>
-            They played rock!
-        </h2>
+        <h2>They played rock!</h2>
+        <h1 class = big><i class="far fa-hand-rock"></i></h1>
         
         <h2>
             We lost!
@@ -23,13 +38,11 @@
 
 <% elsif lucky_number > 66.66 %>
      <p>
-        <h2>
-            We played scissors!
-        </h2>
+        <h2>We played scissors!</h2>
+        <h1 class = big><i class="far fa-hand-scissors"></i></h1>
 
-        <h2>
-            They played paper!
-        </h2>
+        <h2>They played paper!</h2>
+        <h1 class = big><i class="far fa-hand-paper"></i></h1>
         
         <h2>
             We won!
@@ -38,13 +51,11 @@
 
 <% else %>
     <p>
-        <h2>
-            We played scissors!
-        </h2>
+        <h2>We played scissors!</h2>
+        <h1 class = big><i class="far fa-hand-scissors"></i></h1>
 
-        <h2>
-            They played scissors!
-        </h2>
+        <h2>They played scissors!</h2>
+        <h1 class = big><i class="far fa-hand-scissors"></i></h1>
         
         <h2>
             We tied!
@@ -53,4 +64,4 @@
 
 <% end %>
 
-<a href="/home_page">Rules</a>
+<a href="/index">Rules</a>
